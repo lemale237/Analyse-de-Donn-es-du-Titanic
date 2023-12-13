@@ -1,4 +1,5 @@
 # train.py
+from process.py import clean_df_train
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
