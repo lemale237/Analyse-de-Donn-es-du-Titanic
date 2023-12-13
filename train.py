@@ -28,6 +28,7 @@ numerical_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='most_frequent')),  # Remplace les valeurs manquantes par la valeur la plus fréquente
     ('onehot', OneHotEncoder(handle_unknown='ignore'))
 ])
+
 # Supposez que 'Name' est la colonne avec des noms
 label_encoder = LabelEncoder()
 X_train['Name'] = label_encoder.fit_transform(X_train['Name'])
