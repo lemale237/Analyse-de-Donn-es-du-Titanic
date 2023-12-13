@@ -8,6 +8,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
 
 # Divisez votre dataset en ensembles d'entraînement et de test
 X = clean_df_train(df_train).drop('Survived', axis=1)
