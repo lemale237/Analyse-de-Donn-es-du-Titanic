@@ -12,6 +12,9 @@ from sklearn.pipeline import Pipeline
 
 # Divisez votre dataset en ensembles d'entraînement et de test
 X = clean_df_train(df_train).drop('Survived', axis=1)
+y = clean_df_train(df_train)['Survived']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
 X_train['Name'] = label_encoder.fit_transform(X_train['Name'])
 X_test['Name'] = label_encoder.fit_transform(X_test['Name'])
 
