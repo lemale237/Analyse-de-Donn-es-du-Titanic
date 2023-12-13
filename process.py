@@ -10,9 +10,8 @@ def clean_df_train(df_train):
     return df_train
 
 
-def clean_df_train(df_train):
+def clean_df_test(df_test):
     # Identifiez et traitez les valeurs manquantes
     df_test['Age'].fillna(df_test['Age'].median(), inplace=True)
     df_test['Embarked'].fillna(df_test['Embarked'].mode()[0], inplace=True)
-
     return df_test
