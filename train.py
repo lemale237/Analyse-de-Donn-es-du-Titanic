@@ -4,11 +4,10 @@ from process.py import clean_df_train
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
-from sklearn.preprocessing import LabelEncoder
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import LabelEncoder
 
 # Divisez votre dataset en ensembles d'entraînement et de test
 X = clean_df_train(df_train).drop('Survived', axis=1)
