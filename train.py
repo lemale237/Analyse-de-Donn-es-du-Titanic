@@ -1,4 +1,5 @@
 # train.py
+from Td.py import df_train
 from process.py import clean_df_train
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import LogisticRegression
